@@ -1,0 +1,134 @@
+.month-column-content {
+  .content-item {
+    @include flexbox;
+    @include align-items(flex-start);
+    &__date {
+      color: $color_white;
+      background-color: $color_text;
+      line-height: 1.2;
+      .date {
+        span {
+          display: block;
+        }
+      }
+      .year {
+        text-align: right;
+      }
+    }
+  }
+}
+
+@media ( min-width: 1481px ) {
+  .month-column-content {
+    margin-top: 120px;
+    .container {
+      max-width: 805px;
+    }
+    .content-item {
+      +.content-item {
+        margin-top: 100px;
+      }
+      &__date {
+        width: 190px;
+        margin-right: 50px;
+        p {
+          &:not(:last-child) {
+            margin-bottom: 20px;
+          }
+        }
+        .date {
+          @include fontsize(24);
+          padding: 0 10px 0 25px;
+          span {
+            @include fontsize(84);
+            transform: translateX(-15px)
+          }
+        }
+        .year {
+          @include fontsize(42);
+          padding: 0 10px;
+        }
+      }
+      &__content {
+        width: calc(100% - 240px);
+      }
+    }
+    
+  }
+}
+
+@media ( max-width: 1480px ) and ( min-width: 768px ) {
+  .month-column-content {
+    margin-top: vw(120, 1480);
+    .container {
+      max-width: vw(805, 1480);
+    }
+
+    .content-item {
+      +.content-item {
+        margin-top: vw(100, 1480);
+      }
+      &__date {
+        width: vw(190, 1480);
+        margin-right: vw(50, 1480);
+        p {
+          &:not(:last-child) {
+            margin-bottom: vw(20, 1480);
+          }
+        }
+        .date {
+          font-size: vw(24, 1480);
+          padding: 0 vw(10, 1480) 0 vw(25, 1480);
+          span {
+            font-size: vw(84, 1480);
+            transform: translateX(-1.0135135135vw)
+          }
+        }
+        .year {
+          font-size: vw(42, 1480);
+          padding: 0 vw(10, 1480);
+        }
+      }
+      &__content {
+        width: calc(100% - 16vw);
+      }
+    }
+  }
+}
+
+@media ( max-width: 767px ) {
+  .month-column-content {
+    margin: vw(120, 767) 0;
+
+    .content-item {
+      @include flex-flow(row wrap);
+      +.content-item {
+        margin-top: vw(70, 767);
+      }
+      &__date {
+        width: 100%;
+        margin-bottom: vw(40, 767);
+        p {
+          &:not(:last-child) {
+            margin-bottom: vw(10, 767);
+          }
+        }
+        .date {
+          font-size: vw(24, 767);
+          padding: 0 vw(10, 767) 0 vw(25, 767);
+          span {
+            font-size: vw(84, 767);
+            transform: translateX(-1.0135135135vw)
+          }
+        }
+        .year {
+          font-size: vw(61, 767);
+          padding: 0 vw(10, 767);
+        }
+      }
+      &__content {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,124 @@
+.btn {
+  position: relative;
+  overflow: hidden;
+  @include fontsize(34);
+  font-family: $font_kozgopr6n_regular;
+  color: $color_white;
+  border-radius: 0;
+  box-shadow: none;
+  outline: none;
+  min-width: 230px;
+  padding: 5px 20px;
+  z-index: 1;
+  transition: 0.3s;
+  &:after {
+    content: '';
+    position: absolute;
+    width: 120%;
+    height: 245%;
+    left: -130%;
+    top: 50%;
+    z-index: -1;
+    transition: all 0.3s linear;
+    transform: translateY(-50%) rotate(-15deg);
+  }
+  &.btn-primary {
+    background-color: $color_primary;
+    border-color: $color_primary;
+    &:after {
+      background-color: #479727;
+    }
+  }
+  &.btn-secondary {
+    background-color: $color_secondary;
+    border-color: $color_secondary;
+    &:after {
+      background-color: #007570;
+    }
+  }
+  &.btn-thrid {
+    background-color: $color_thrid;
+    border-color: $color_thrid;
+    &:after {
+      background-color: #003F7F;
+    }
+  }
+  &.btn-contact {
+    background-color: #5F5F5F;
+    &:hover {
+      background-color: #000000;
+    }
+  }
+  &.btn-equipment {
+    background-color: $color_white;
+    color: $color_text;
+    border-color: $color_text;
+    &:after {
+      background-color: $color_primary;
+    }
+  }
+  &.btn-management {
+    background-color: $color_white;
+    color: $color_text;
+    border-color: $color_text;
+    &:after {
+      background-color: $color_secondary;
+    }
+  }
+  &.btn-environment {
+    background-color: $color_white;
+    color: $color_text;
+    border-color: $color_text;
+    &:after {
+      background-color: $color_thrid;
+    }
+  }
+  &.btn-submit {
+    background-color: #5F5F5F;
+    &:after {
+      background-color: $color_primary;
+      transform: translateY(-50%) rotate(-10deg);
+    }
+  }
+  &:hover {
+    color: $color_white;
+    &:after {
+      left: -10%;
+    }
+    &.btn-primary {
+      border-color: #479727;
+    }
+    &.btn-secondary {
+      border-color: #007570;
+    }
+    &.btn-thrid {
+      border-color: #003F7F;
+    }
+    &.btn-equipment {
+      border-color: $color_primary;
+    }
+    &.btn-management {
+      border-color: $color_secondary;
+    }
+    &.btn-environment {
+      border-color: $color_thrid;
+    }
+    &.btn-contact {
+      border-color: #000000;
+    }
+    &.btn-submit {
+      border-color: $color_primary;
+    }
+  }
+  &.prev {
+    &:after {
+      left: auto !important;
+      right: -130%;
+    }
+    &:hover {
+      &:after {
+        right: -10%;
+      }
+    }
+  }
+}

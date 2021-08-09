@@ -1,0 +1,45 @@
+body {
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -ms-text-size-adjust: 100%; /* 2 */
+}
+
+@font-face {
+  font-family: helvetica-bold;
+  src: url("../fonts/Helvetica.ttc");
+}
+@font-face {
+  font-family: kozgopr6n-regular;
+  src: url("../fonts/KozGoPr6N-Regular.otf") format('opentype');
+}
+@font-face {
+  font-family: notosans-regular;
+  src: url("../fonts/NotoSansCJKjp-Regular.otf") format('opentype');
+}
+@font-face {
+  font-family: notosans-medium;
+  src: url("../fonts/NotoSansCJKjp-Medium.otf") format('opentype');
+}
+@font-face {
+  font-family: notosans-bold;
+  src: url("../fonts/NotoSansCJKjp-Bold.otf") format('opentype');
+}
+@font-face {
+  font-family: roboto-bold;
+  src: url("../fonts/Roboto-Bold.ttf");
+}
+
+.helvetica-bold {
+  font-family: $font_helvetica_bold;
+}
+.kozgopr6n-regular {
+  font-family: $font_kozgopr6n_regular;
+}
+.notosans-regular {
+  font-family: $font_notosans_regular;
+}
+.notosans-bold {
+  font-family: $font_notosans_bold;
+}
+.roboto-bold {
+  font-family: $font_roboto_bold;
+}

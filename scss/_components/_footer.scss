@@ -1,0 +1,228 @@
+.page-top {
+  text-align: right;
+  a {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: vw(54, 640);
+    height: vw(54, 640);
+    background-color: $color_text;
+    &:after {
+      content: '';
+      position: absolute;
+      width: vw(20, 640);
+      height: vw(20, 640);
+      border-top: vw(2, 640) solid $color_white;
+      border-right: vw(2, 640) solid $color_white;
+      left: 50%;
+      top: 60%;
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+}
+footer {
+  font-family: $font_notosans_bold;
+  background-color: $footer_bg;
+  line-height: (34/18);
+  .footer-nav {
+    color: $footer_color;
+    a {
+      color: $footer_color;
+    }
+    .fnav {
+      margin: 0;
+      a {
+        text-decoration: none;
+      }
+      >li {
+        >a {
+          line-height: 1.3;
+          span {
+            display: block;
+          }
+        }
+        ul {
+          font-family: $font_notosans_regular;
+        }
+      }
+    }
+  }
+  .footer-copyright {
+    background-color: $footer_copyright_bg;
+    color: $footer_copyright_color;
+    text-align: center;
+    padding: 8px 0;
+  }
+}
+
+@media ( min-width: 768px ) {
+  footer {
+    padding-top: 60px;
+    @include fontsize(18);
+    p {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+    .footer-nav {
+      padding-bottom: 60px;
+      .logo-footer {
+        width: $logo_width_pc+px;
+        height: $logo_height_pc+px;
+        margin-bottom: 45px;
+      }
+      .fnav {
+        >li {
+          margin-bottom: 40px;
+          >a {
+            @include fontsize(24);
+            span {
+              @include fontsize(15);
+            }
+          }
+          ul {
+            margin-top: 20px;
+            li {
+              +li {
+                margin-top: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media ( min-width: 1200px ) {
+  footer {
+    .widget-item {
+      &:not(.widget-item__info) {
+        padding-top: 25px;
+      }
+    }
+    .footer-nav {
+      .fnav {
+        >li {
+          &:not(.has-under) {
+            >a {
+              display: inline-block;
+              min-height: 54px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media ( max-width: 1400px ) and ( min-width: 1300px ) {
+  footer {
+    @include fontsize(16);
+  }
+}
+
+@media ( max-width: 1299px ) and ( min-width: 992px ) {
+  footer {
+    @include fontsize(16);
+    .widget-item {
+      &:not(.widget-item__info) {
+        padding-top: 15px;
+      }
+    }
+    .footer-nav {
+      .logo-footer {
+        width: $logo_width_tb+px;
+        height: $logo_height_tb+px;
+      }
+      .fnav {
+        >li {
+          &:not(.has-under) {
+            >a {
+              display: inline-block;
+              min-height: 41px;
+            }
+          }
+          >a {
+            @include fontsize(20);
+            span {
+              @include fontsize(12);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media ( max-width: 991px ) and ( min-width: 768px ) {
+  footer {
+    .widget-item__info {
+      margin-bottom: 60px;
+    }
+    .footer-nav {
+      .fnav {
+        >li {
+          &:not(.has-under) {
+            >a {
+              display: inline-block;
+              min-height: 54px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media ( max-width: 767px ) {
+  footer {
+    padding-top: vw(70, 640);
+    font-size: vw(18, 640);
+    p {
+      &:not(:last-child) {
+        margin-bottom: vw(20, 640);
+      }
+    }
+    .footer-nav {
+      padding-bottom: vw(50, 640);
+      .logo-footer {
+        width: vw($logo_width_sp, 640);
+        height: vw($logo_height_sp, 640);
+        margin: 0 auto vw(30, 640);
+      }
+      .fnav {
+        >li {
+          &:not(:last-child) {
+            margin-bottom: vw(50, 640);
+          }
+          >a {
+            font-size: vw(24, 640);
+            span {
+              font-size: vw(15, 640);
+            }
+          }
+          ul {
+            margin-top: vw(18, 640);
+            li {
+              &:not(:last-child) {
+                margin-bottom: vw(10, 640);
+              }
+            }
+          }
+        }
+      }
+    }
+    .widget-item {
+      &:not(:last-child) {
+        margin-bottom: vw(35, 640);
+      }
+      &__info {
+        text-align: center;
+      }
+    }
+    .footer-copyright {
+      padding: vw(8, 640) vw(20, 640);
+    }
+  }
+}

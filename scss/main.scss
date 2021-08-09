@@ -1,0 +1,42 @@
+$font_default: notosans-medium, sans-serif;
+$font_helvetica_bold: helvetica-bold, sans-serif;
+$font_kozgopr6n_regular: kozgopr6n-regular, sans-serif;
+$font_notosans_regular: notosans-regular, sans-serif;
+$font_notosans_bold: notosans-bold, sans-serif;
+$font_roboto_bold: roboto-bold, sans-serif;
+
+$font_size: 23;
+
+$header_height_pc: 142;
+$logo_width_pc: 300;
+$logo_height_pc: 70;
+
+$header_height_tb: 100;
+$logo_width_tb: 200;
+$logo_height_tb: 47;
+
+$header_height_sp: 94;
+$logo_width_sp: 300;
+$logo_height_sp: 70;
+
+$media_break_point: 768;
+
+@import "_mixin/fonts";
+@import "_mixin/base";
+@import "_mixin/function";
+@import "_mixin/color";
+@import "_mixin/reset";
+@import "_mixin/headline";
+@import "_mixin/button";
+@import "_mixin/table";
+@import "_components/header";
+@import "_other/search";
+@import "_components/breadcrumb";
+@import "_components/footer";
+
+@import "_components/banner";
+@import "_page/home";
+@import "_page/service";
+@import "_page/month_column";
+@import "_page/company";
+@import "_page/contact";

@@ -1,0 +1,58 @@
+.banner {
+  position: relative;
+  margin-bottom: 100px;
+  .banner-content {
+    position: absolute;
+    width: 100%;
+    max-width: 1360px;
+    padding: 0 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-family: $font_notosans_bold;
+    line-height: (60/28);
+    text-shadow: 0px 0px 8px rgba(0,0,0,0.82);
+    color: $color_white;
+  }
+}
+
+@media ( min-width: 1367px ) {
+  .banner {
+    .banner-content {
+      top: 15%;
+      @include fontsize(28);
+      line-height: (60/28);
+    }
+  }
+}
+
+@media ( max-width: 1366px ) and ( min-width: $media_break_point+px ) {
+  .banner {
+    .banner-content {
+      top: 12%;
+      font-size: vw(27, 1366);
+      line-height: (60/28);
+    }
+  }
+}
+
+@media ( max-width: 1023px ) and ( min-width: 768px ) {
+  .banner {
+    margin-bottom: 70px;
+  }
+}
+
+@media ( max-width: 767px ) {
+  .banner {
+    min-height: vw(1063, 640);
+    background-color: #EDEEEF;
+    @include flexbox;
+    @include align-items(flex-end);
+    margin-bottom: vw(80, 640);
+    .banner-content {
+      font-size: vw(31.5, 640);
+      line-height: (61/31);
+      top: vw(60, 640);
+    }
+  }
+}

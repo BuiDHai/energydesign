@@ -1,0 +1,53 @@
+table {
+  width: 100%;
+  th, td {
+    border: 2px solid #000000;
+    text-align: center;
+  }
+}
+
+.table-default {
+  th {
+    color: $color_white;
+  }
+  &.table-management {
+    th {
+      background-color: $color_primary;
+    }
+  }
+}
+
+.table-info {
+  background: none;
+}
+
+@media ( min-width: 1481px ) {
+  .table-default {
+    th, td {
+      padding: 5px 10px;
+    }
+  }
+  .table-info {
+    margin-top: 10px;
+  }
+}
+
+@media ( max-width: 1480px ) and ( min-width: 768px ) {
+  .table-default {
+    th, td {
+      padding: vw(5, 1480) vw(10, 1480);
+    }
+  }
+  .table-info {
+    margin-top: vw(10, 1480);
+  }
+}
+
+@media ( max-width: 767px ) {
+  .table-responsive {
+    overflow-x: auto;
+    .table-default {
+      min-width: vw(1300, 640);
+    }
+  }
+}

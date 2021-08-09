@@ -1,0 +1,551 @@
+.energy-service {
+  h2 {
+    text-align: center;
+    padding: 0 15px;
+    margin-bottom: 60px;
+  }
+  .service-item {
+    &__image {
+      .image {
+        position: relative;
+        overflow: hidden;
+        &:after, &:before {
+          content: '';
+          position: absolute;
+        }
+        &:before {
+          border-bottom: 165px solid #7FB136;
+          border-right: 210px solid transparent;
+          border-left: 100px solid transparent;
+          transform: rotate(-32deg);
+        }
+        &:after {
+          border-left: 110px solid #7FB136;
+          border-bottom: 190px solid transparent;
+          border-top: 55px solid transparent;
+          transform: rotate(60deg);
+        }
+      }
+      .numb {
+        font-family: $font_helvetica_bold;
+        position: absolute;
+        left: 15px;
+        top: 5px;
+        @include fontsize(93);
+        font-weight: bold;
+        font-style: italic;
+        line-height: 1;
+        color: $color_white;
+        text-shadow: 0px 0px 10px rgba(0,0,0,0.82);
+      }
+    }
+    &__content {
+      line-height: (51/26);
+      font-family: $font_notosans_regular;
+      h3 {
+        margin-bottom: 40px;
+        span {
+          display: block;
+          color: #6E6E6E;
+          border-top: 4px solid $color_primary;
+          margin-top: 7px;
+          padding-top: 5px;
+        }
+      }
+      .description {
+        margin-bottom: 55px;
+      }
+      .more {
+        text-align: center;
+      }
+    }
+    
+  }
+  &__item {
+    &:nth-child(2) {
+      .service-item__image {
+        .image {
+          &:before {
+            border-bottom-color: $color_secondary;
+          }
+          &:after {
+            border-left-color: $color_secondary;
+          }
+        }
+      }
+      .service-item__content {
+        h3 {
+          span {
+            border-top-color: $color_secondary;
+          }
+        }
+      }
+    }
+    &:nth-child(3) {
+      .service-item__image {
+        .image {
+          &:before {
+            border-bottom-color: $color_thrid;
+          }
+          &:after {
+            border-left-color: $color_thrid;
+          }
+        }
+      }
+      .service-item__content {
+        h3 {
+          span {
+            border-top-color: $color_thrid;
+          }
+        }
+      }
+    }
+  }
+}
+
+.energy-information {
+  .information-item {
+    display: block;
+    background-color: #F1F1F1;
+    &__content {
+      font-family: $font_notosans_bold;
+      text-align: center;
+      line-height: 1.3;
+      span {
+        display: block;
+      }
+    }
+    &:hover {
+      color: #5F5F5F;
+      text-decoration: none;
+    }
+  }
+}
+
+.energy-contact {
+  &__wrap {
+    border: 1px solid #5F5F5F;
+  }
+  h2 {
+    margin-bottom: 80px;
+    text-align: center;
+  }
+  &__list {
+    .tel {
+      font-family: $font_roboto_bold;
+      span {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+@media ( min-width: 768px ) {
+  .energy-service {
+    &__item {
+      @include flexbox;
+      .service-item {
+        &__image {
+          margin-right: 4.5%;
+          .image {
+            &:before {
+              left: -70px;
+              top: -70px;
+            }
+            &:after {
+              right: 18px;
+              bottom: -110px;
+            }
+          }
+        }
+        &__content {
+          padding-top: 20px;
+          @include flexbox;
+          @include flex-direction(column);
+          >* {
+            width: 100%;
+          }
+          .more {
+            margin-top: auto;
+          }
+        }
+      }
+    }
+  }
+  .energy-information {
+    &__items {
+      @include flexbox;
+    }
+    .information-item {
+      @include flexbox;
+      @include align-items(center);
+      &__image, &__content {
+        width: 50%;
+      }
+      &__content {
+        span {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+  .energy-contact {
+    &__list {
+      @include flexbox;
+      @include align-items(center);
+      .tel {
+        width: 44%;
+        text-align: right;
+      }
+      .more {
+        width: 56%;
+        border-left: 3px solid $color_text;
+      }
+    }
+  }
+}
+
+@media ( min-width: 1024px ) {
+  .energy-service {
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: 130px;
+      }
+    }
+  }
+  .energy-information {
+    .information-item {
+      width: calc((100% - 55px) / 2);
+      &:not(:nth-child(2n)) {
+        margin-right: 55px;
+      }
+    }
+  }
+  .energy-contact {
+    margin-top: 165px;
+  }
+}
+
+@media ( min-width: 1367px ) {
+  .energy-service {
+    margin-bottom: 230px;
+    &__item {
+      .service-item {
+        &__image {
+          width: 504px;
+        }
+        &__content {
+          width: calc(100% - 504px - 4.5%);
+        }
+      }
+    }
+    .service-item {
+      &__content {
+        @include fontsize(26);
+        h3 span {
+          @include fontsize(23);
+        }
+      }
+    }
+  }
+
+  .energy-information {
+    .information-item {
+      &__content {
+        @include fontsize(30);
+        span {
+          @include fontsize(19);
+        }
+      }
+    }
+  }
+}
+
+@media ( min-width: 1481px ) {
+  .energy-contact {
+    &__wrap {
+      padding: 65px;
+    }
+    &__list {
+      .tel {
+        font-size: 58px;
+        line-height: (60/58);
+        padding-right: 65px;
+        span {
+          font-size: 47px;
+          margin-right: 30px;
+        }
+      }
+      .more {
+        padding-left: 65px;
+        .btn {
+          font-size: 44px;
+          padding: 15px 80px;
+        }
+      }
+    }
+  }
+}
+
+@media ( max-width: 1480px ) and ( min-width: 768px ) {
+  .energy-contact {
+    &__wrap {
+      padding: vw(65, 1480);
+    }
+    h2 {
+      margin-bottom: vw(80, 1480);
+    }
+    &__list {
+      .tel {
+        font-size: vw(58, 1480);
+        line-height: (60/58);
+        padding-right: vw(65, 1480);
+        span {
+          font-size: vw(47, 1480);
+          margin-right: vw(20, 1480);
+        }
+      }
+      .more {
+        padding-left: vw(65, 1480);
+        .btn {
+          font-size: vw(44, 1480);
+          padding: vw(15, 1480) vw(80, 1480);
+        }
+      }
+    }
+  }
+}
+
+@media ( max-width: 1366px ) and ( min-width: 1024px ) {
+  .energy-service {
+    margin-bottom: 150px;
+    &__item {
+      .service-item {
+        &__image {
+          width: 430px;
+        }
+        &__content {
+          width: calc(100% - 430px - 4.5%);
+        }
+      }
+    }
+    .service-item {
+      &__content {
+        @include fontsize(20);
+        h3 span {
+          @include fontsize(16);
+        }
+        .btn {
+          @include fontsize(26);
+        }
+      }
+    }
+  }
+
+  .energy-information {
+    .information-item {
+      &__content {
+        @include fontsize(25);
+        span {
+          @include fontsize(16);
+        }
+      }
+    }
+  }
+}
+
+@media ( max-width: 1023px ) and ( min-width: 768px ) {
+  .energy-service {
+    margin-bottom: 100px;
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: 80px;
+      }
+      .service-item {
+        &__image {
+          width: vw(400, 1023);
+          margin-right: 4vw;
+          .image {
+            &:before {
+              border-width: 0 vw(190, 1023) vw(150, 1023) vw(90, 1023);
+              left: - vw(70, 1023);
+              top: - vw(70, 1023);
+            }
+            &:after {
+              border-width: vw(55, 1023) 0 vw(160, 1023) vw(90, 1023);
+              right: vw(18, 1023);
+              bottom: - vw(110, 1023);
+            }
+          }
+          .numb {
+            font-size: vw(80, 1023);
+            left: vw(10, 1023);
+            top: vw(5, 1023);
+          }
+        }
+        &__content {
+          width: vw(619, 1023);
+          .description {
+            margin-bottom: 35px;
+          }
+          h3 {
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+    .service-item {
+      &__content {
+        @include fontsize(16);
+        h3 span {
+          @include fontsize(15);
+        }
+        .btn {
+          @include fontsize(20);
+        }
+      }
+    }
+  }
+  
+  .energy-information {
+    .information-item {
+      width: 48%;
+      &:not(:nth-child(2n)) {
+        margin-right: 4%;
+      }
+      &__content {
+        @include fontsize(20);
+        span {
+          @include fontsize(12);
+        }
+      }
+    }
+  }
+
+  .energy-contact {
+    margin-top: 125px;
+  }
+}
+
+@media ( max-width: 767px ) {
+  .energy-service {
+    margin-bottom: vw(150, 640);
+    &__item {
+      +.energy-service__item {
+        margin-top: vw(100, 640);
+      }
+    }
+    .container {
+      padding: 0 vw(65, 640);
+    }
+    h2 {
+      margin-bottom: vw(60, 640);
+    }
+    .service-item {
+      &__image {
+        margin-bottom: vw(62, 640);
+        .image {
+          img {
+            width: 100%;
+          }
+          &:before {
+            border-width: 0 vw(210, 640) vw(165, 640) vw(100, 640);
+            top: - vw(70, 640);
+            left: - vw(70, 640);
+          }
+          &:after {
+            border-width: vw(55, 640) 0 vw(190, 640) vw(110, 640);
+            right: vw(18, 640);
+            bottom: - vw(110, 640);
+          }
+        }
+        .numb {
+          font-size: vw(93, 640);
+        }
+      }
+      &__content {
+        h3 {
+          font-size: vw(30, 640);
+          margin-bottom: vw(35, 640);
+          span {
+            font-size: vw(23, 640);
+            line-height: (27/23);
+          }
+        }
+        .description {
+          font-size: vw(26, 640);
+          line-height: (49/26);
+          margin-bottom: vw(30, 640);
+        }
+        .more {
+          .btn {
+            font-size: vw(34, 640);
+            min-width: vw(230, 640);
+            padding: vw(7, 640) vw(20, 640);
+          }
+        }
+      }
+    }
+  }
+
+  .energy-information {
+    margin-bottom: vw(140, 640);
+    .container {
+      padding: 0 vw(65, 640);
+    }
+    img {
+      width: 100%;
+    }
+    .information-item {
+      +.information-item {
+        margin-top: vw(70, 640);
+      }
+      &__content {
+        min-height: vw(175, 640);
+        @include flexbox;
+        @include align-items(center);
+        @include justify-content(center);
+        @include flex-direction(column);
+        width: 100%;
+        font-size: vw(38, 640);
+        line-height: (43/38);
+        span {
+          font-size: vw(24, 640);
+          margin-top: vw(25, 640);
+        }
+      }
+    }
+  }
+
+  .energy-contact {
+    &__wrap {
+      padding: vw(50, 640) vw(70, 640);
+    }
+    h2 {
+      font-size: vw(34, 640);
+      margin-bottom: vw(45, 640);
+    }
+    &__list {
+      li {
+        +li {
+          margin-top: vw(45, 640);
+        }
+      }
+      .tel {
+        font-size: vw(47, 640);
+        text-align: center;
+        line-height: 1.2;
+        span {
+          font-size: vw(37, 640);
+        }
+      }
+      .more {
+        .btn {
+          display: block;
+          font-size: vw(27, 640);
+          padding: vw(8, 640) vw(20, 640);
+        }
+      }
+    }
+  }
+}

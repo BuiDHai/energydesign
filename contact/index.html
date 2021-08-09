@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+  <link rel="icon" href="../favicon.png">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="../css/libs/bootstrap/css/bootstrap.min.css">
+
+  <!-- mCustomScrollbar -->
+  <link rel="stylesheet" href="../css/libs/jquery.mCustomScrollbar.min.css">
+
+  <!-- main css -->
+  <link rel="stylesheet" href="../css/main.min.css">
+
+  <title>お問合せ</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header-wrap">
+      <div class="logo">
+        <a href="../index.html"><img src="../images/logo.svg" alt="EnergyDesign"></a>
+      </div>
+      <div class="navbar">
+        <button class="navbar-toggler" type="button">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        
+        <ul class="primary-nav list-unstyled">
+          <li><a href="../index.html">HOME</a></li>
+          <li>
+            <a href="#">サービス</a>
+            <ul class="nav-chil list-unstyled">
+              <li><a href="../equipment/index.html">環境設備設計・省エネルギーデザイン</a></li>
+              <li><a href="../management/index.html">管理・運営支援</a></li>
+              <li><a href="../environment/index.html">水環境の演出</a></li>
+            </ul>
+          </li>
+          <li><a href="../month-column/index.html">今月のコラム<span>(This month's column)</span></a></li>
+          <li><a href="../company/index.html">会社概要</a></li>
+          <li><a href="../contact/index.html">お問合せ</a></li>
+          <li class="nav-contact">
+            <p class="txt-info">お問い合わせ</p>
+            <p class="tel"><span>TEL</span><a href="tel:0362158429">03-6215-8429</a></p>
+            <p class="more"><a href="../contact/index.html" class="btn btn-contact">メールにてお問い合わせ</a></p>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+    <nav aria-label="breadcrumb" class="breadcrumbs ani_basic">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="../index.html">HOME</a></li>
+              <li class="breadcrumb-item active" aria-current="page">お問合せ</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <h1 class="page-title main-title text-center">お問合せ</h1>
+
+    <section class="contact-content">
+      <div class="container">
+        <div class="box-txt">
+          <p>
+            お問い合わせありがとうございます。<br />
+            「設備の更新」「維持管理」「省エネルギー・<br class="sp-only" />省コスト」「ESCO事業」等、<br />
+            お悩みがありましたら 内容を確認次第、<br class="sp-only" />メールにてご連絡致します。<br />
+            尚、お問い合わせ内容によりましては、<br class="sp-only" />ご回答に時間がかかる場合がございます。<br />
+            また、いただいたメールアドレスが<br class="sp-only" />違っている場合や、システム障害などにより<br class="sp-only" />お返事でき ない場合がございます。<br />
+            大変お手数ですが返答のない場合は、<br class="sp-only" />お電話でその旨お問い合わせください。
+          </p>
+        </div>
+
+        <p class="txt-form-info"><span class="require">＊</span>印は必須項目となっております。</p>
+
+        <form action="#" method="POST" class="contact-form">
+          <div class="form-group">
+            <label for="name">お名前<span class="require">＊</span></label>
+            <input type="text" class="form-control" id="name">
+          </div>
+          <div class="form-group">
+            <label for="name_furigana">フリガナ<span class="require">＊</span></label>
+            <input type="text" class="form-control" id="name_furigana">
+          </div>
+          <div class="form-group">
+            <label for="address">住所<span class="require">＊</span></label>
+            <div class="form-input">
+              <div class="form-address">
+                <span class="txt">〒</span>
+                <input type="text" class="form-control" id="address">
+              </div>
+              <input type="text" class="form-control" id="address1">
+              <input type="text" class="form-control" id="address2">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="phone">電話番号<span class="require">＊</span></label>
+            <div class="form-tel">
+              <input type="text" class="form-control" id="phone">
+              <span class="txt">ー</span>
+              <input type="text" class="form-control" id="phone1">
+              <span class="txt">ー</span>
+              <input type="text" class="form-control" id="phone2">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">メールアドレス<span class="require">＊</span></label>
+            <input type="email" class="form-control" id="email">
+          </div>
+          <div class="form-group">
+            <label for="inquiry_content">お問い合わ内容 <span class="require">＊</span></label>
+            <textarea name="inquiry_content" id="inquiry_content" cols="30" rows="10" class="form-control"></textarea>
+          </div>
+
+          <div class="form-group form-privacy">
+            <p>
+              送信の前に下記の個人情報の取り扱いをご一読いただき、<br />
+              ご同意のうえご送信をお願いいたします
+            </p>
+            <div class="form-privacy__content mCustomScrollPrivacy" data-mcs-theme="dark">
+              <h4>個人情報取扱方針</h4>
+              <p>
+                　当社は、常日頃からクライアント様の視点に立ち、質の高い環境の実現とより良いクライアントサービスの提供を心がけて、コンサルタント業務を行っています。常にクライアント様のオーダーに応じて的確なサービスを提供させていただくために、様々な情報が必要です。ステークホルダー（stakeholder）一人一人と確かな関係を築き上げ、安心してサービスを受けていただくために、個人情報の安全な管理は必須です。当社では、下記の方針に基づき、個人情報については適正に取り扱うよう全力で努めてまいります。
+              </p>
+              <h5>個人情報の収集</h5>
+              <p class="txt-info">
+                　当社は、設計および当社の管理運営に必要な範囲に限り、クライアント様の情報を収集致します。その利用目的については、あらかじめ明示いたします。また、その他の目的に応じて個人情報を利用する場合は、利用目的をあらかじめお知らせして、ご了解を得た上で行います。 
+              </p>
+              <h5>個人情報の収集・利用</h5>
+              <p class="txt-info">
+                　弊社はさらなるサービスの向上のため、以下の 2 点の目的にしたがって、その範囲内においてのみ、個人情報を収集・利用いたします。弊社による個人情報の収集・利用は、お客様の自発的な提供によるものであり、お客様が個人情報を提供された場合は、弊社が本方針にのっとって個人情報を利用することをお客様が許諾したものとさせていただきます。<br />
+                1. 業務遂行上で必要となる弊社からの問い合わせ、確認、および意見の収集<br />
+                2. お問い合わせ対応各種
+              </p>
+              <h5>個人情報の第三者提供</h5>
+              <p class="txt-info">
+                　弊社は基本的に、事前に本人の同意を得ることなく、個人情報を第三者に開示・提供することはありません。なお法令に基づく場合など正当な理由が合った場合は開示・提供させていただく可能性があります。
+              </p>
+              <h5>委託先の監督</h5>
+              <p class="txt-info">
+                　弊社は、お客様に商品やサービスを提供するうえで、個人情報の一部を外部の委託先へ提供する場合があります。その場合、<br />
+                業務委託先が適切に個人情報を取り扱うように管理いたします。
+              </p>
+              <h5>個人情報の管理</h5>
+              <p class="txt-info">
+                　弊社は、個人情報の漏洩、滅失、毀損などを防止するために、個人情報保護管理責任者を設置し、十分な安全保護に努めます。<br />
+                またそれぞれの個人情報を正確かつ最新なものに保つよう、お預かりした個人情報の適切な管理を行ないます。
+              </p>
+              <h5>情報内容の照会、修正または削除</h5>
+              <p class="txt-info">
+                　弊社は、お客様がご提供いただいた個人情報の照会、修正または削除を希望される場合、すみやかに対応させていただきます。<br />
+                なお、その際には公的証明書などを利用して、ご本人であることを確認させていただきます。
+              </p>
+              <h5>セキュリティーについて</h5>
+              <p class="txt-info">
+                　弊社は、さくらインターネット株式会社発行のサーバ証明書による SSL（Let'sEncrypt）暗号化技術を用いて、お客様の情報が送信される際の通信を暗号化しております。
+              </p>
+              <h5>Google アナリティクスについて</h5>
+              <p class="txt-info">
+                　当サイトではさらなるサービス品質の向上を目指して、Google アナリティクスを使用したアクセス解析を行なっております。<br />
+                  Google アナリティクスとは検索エンジンサービスの Google が提供している Web ページのアクセス解析のためのツールです。<br />
+                  また Google アナリティクスはアクセス解析のために Cookie を使用します。Cookie とは Web ページにおいて「会員証」のよ
+                  うな役割を果たすものです。ページを訪れたユーザーの情報を Cookie で記憶することで、一人ひとりの方に合わせたサービス
+                  を提供できます。Google アナリティクスでデータが収集、処理される仕組みについては、「ユーザーが Google パートナーのサ
+                  イトやアプリを使用する際の Google によるデータ使用（<a href="https://www.google.com/intl/ja/policies/privacy/partners/" target="_blank">https://www.google.com/intl/ja/policies/privacy/partners/</a>）」の
+                  Web サイトを参照してください。
+              </p>
+            </div>
+            <p>
+              当社の個人情報の取扱いにご同意され、<br class="sp-only" />必要事項を記入し終えましたら、<br />
+              「個人情報の取り扱いに同意する」にチェックを入れ、<br class="sp-only" />下の「入力内容を確認する」ボタンを押してください
+            </p>
+          </div>
+
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="agree">
+            <label for="agree" class="form-check-label">個人情報の取り扱いに同意する</label>
+          </div>
+
+          <button class="btn btn-submit" type="submit">入力内容を確認する</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="page-top sp-only">
+    <a href="#"></a>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-nav">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-lg-5 col-xl-4 widget-item widget-item__info">
+            <div class="logo-footer">
+              <img src="../images/logo.svg" alt="EnergyDesign">
+            </div>
+            <div class="widget-item__text">
+              <p>東京都中央区銀座1 丁目19－10 TNB ビル3F</p>
+              <p>
+                TEL 03-6215-8429（代）<br />
+                FAX 03-6228-6299
+              </p>
+            </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 widget-item">
+            <ul class="fnav list-unstyled">
+              <li><a href="../index.html">HOME</a></li>
+              <li class="has-under">
+                <a href="#">サービス</a>
+                <ul class="fnav-child list-unstyled">
+                  <li><a href="../equipment/index.html">- 環境設備設計・省エネルギーデザイン</a></li>
+                  <li><a href="../management/index.html">- 管理・運営支援</a></li>
+                  <li><a href="../environment/index.html">- 水環境の演出</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="col-xl-4 col-lg-3 col-md-6 col-sm-12 widget-item">
+            <ul class="fnav list-unstyled">
+              <li><a href="../month-column/index.html">今月のコラム<span>(This month's column)</span></a></li>
+              <li><a href="../company/index.html">会社概要</a></li>
+              <li><a href="../contact/index.html">お問合せ</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <p>&copy;Energy Design.inc.  Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- jquery -->
+  <script src="../js/libs/jquery-3.5.1.min.js"></script>
+
+  <!-- bootstrap js -->
+  <script src="../css/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- mCustomScrollbar -->
+  <script src="../js/libs/jquery.mCustomScrollbar.concat.min.js"></script>
+
+  <!-- mCustomScrollbar -->
+  <script src="../js/libs/jquery.inview.min.js"></script>
+
+  <!-- main js -->
+  <script src="../js/main.js"></script>
+
+  <script>
+    $('.mCustomScrollPrivacy').mCustomScrollbar();
+  </script>
+
+</body>
+
+</html>
